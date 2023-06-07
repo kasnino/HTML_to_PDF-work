@@ -1,3 +1,411 @@
 // Place all the styles related to the Pdf controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+  font-family: "Calibri Regular";
+  src: url("assets/font/Calibri-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeue Regular";
+  src: url("assets/font/bebas-neue-pro-bold-italic.otf");
+}
+
+body, html{
+    border:0px;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    position:relative;
+    overflow-x: hidden;
+  background: red;
+      padding: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+@mixin texto-general-title {
+    font-size: 18px;
+    // line-height: 25px;
+    text-transform: uppercase;
+    color: #2d4c7b;
+    font-weight: 400;
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: italic !important;
+  }
+
+  @mixin texto-seleccion-label{
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #818181;
+    font-weight: bold;
+    font-family: "Calibri Regular", sans-serif;
+    white-space: nowrap;
+    font-style: italic !important;
+  }
+
+  @mixin input-text 
+  {
+    font-size: 15px;
+    line-height: 23px;
+    color: #2d4c7b;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: "Calibri Regular", sans-serif;
+    display: flex;
+    white-space: nowrap; 
+  }
+
+  @mixin texto-footer{
+    font-size: 11.5px;
+    line-height: 18px;
+    color: #2d4c7b;
+    font-weight: 500;
+    font-family: "Calibri Regular", sans-serif;
+    display: flex;
+  }
+
+  .text-footer{
+    @include texto-footer;
+  }
+
+  .seleccionado-si-no{
+    font-size: 13px !important;
+  }
+ 
+  .mi-radio input[type=radio] {
+    /* Oculta el input radio original */
+    display: none;
+  }
+  .mi-radio span {
+    /* Agrega position: relative al elemento padre */
+    position: relative;
+  }
+  
+  .mi-radio span::after {
+    /* Crea un círculo vacío para representar el botón de radio no seleccionado */
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid #2d4c7b;
+    margin-left: 5px;
+    position:relative !important;
+  }
+  
+  .mi-radio input[type="radio"]:checked ~ span::before {
+    /* Muestra el círculo lleno cuando el botón de radio está seleccionado */
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #2d4c7b;
+    /* Centra el círculo lleno dentro del círculo vacío */
+    position: absolute !important;
+    top: 36.5%;
+    left: 52%;
+  }
+
+  .border-interno-box-footer{
+    border: 1px solid gray;
+    padding-top: 4% !important;
+    margin-bottom: 4.5% !important;
+    margin-top: 1.5% !important;
+    
+  }
+  .container-seleccion{
+    display: flex;
+    background: white;
+    justify-content: space-between;
+    padding: 7px;
+    border-radius: 9px;
+    flex-direction: column;
+
+    .fila {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 2px;
+
+        div span {
+          @include input-text;
+          padding-right: 2px;
+          padding-left: 2px;
+        }
+    }
+  }
+
+  .container-align-section-filaUno{
+    display: flex;
+  }
+
+.header{
+        position:relative;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        margin-left: 63px;
+        margin-right: 63px;
+        padding-top: 1.4%;
+}
+
+.logo{
+    padding-top: 1%;
+}
+
+.title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2%;
+   
+}
+
+.member-id{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin-left: 3px;
+
+    .icono-svg-title{
+        width:33px;
+        height: auto;
+    }
+
+    .icono-svg{
+        width:18px;
+        height: auto;
+    }
+
+span {
+    @include texto-general-title;
+    padding-left: 5px;
+    white-space: nowrap;
+}
+}
+
+.ffm-id {
+    span {
+        @include texto-general-title;
+    }
+}
+.box-id-conatiner{
+    width:auto;
+    height: 100%;
+    width: 22%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.box-id{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // padding: 4px;
+    // height: 38px;
+    border-radius: 10px;
+    background-color: #2c4b7a;
+    font-size: 17px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Bebas Neue";
+    padding-left: 10px;
+}
+.title .title-subrallado{
+    font-size: 37px;
+    letter-spacing: 3px;
+    line-height: 43px;
+    text-transform: uppercase;
+    color: #2c4b7a;
+    font-weight: 400;
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: italic;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.container-subtitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding-top: 4px;
+    border-top: 4px solid #2d4b7a;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.logo_header{
+    width: auto;
+    height: 100px; 
+  padding-top: 12%;
+}
+
+.corner-image-top-right{
+    position:absolute;
+    top: -24px;
+    right: -24.5%;
+    width: 86.5%;
+    height: auto;
+}
+.content-main{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    // border: 2px solid grey;
+    margin-left: 9%;
+    margin-right: 8%;
+    margin-top: 2.4%;
+
+}
+
+.section-container-Accountn{
+  display: flex;
+  // flex-direction: column;
+}
+
+.footer{
+    position:relative;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 9.5%;
+    margin-right: 4%;
+    background: pink;
+    padding: 0px !important;
+    margin-bottom: 0px !important;
+    border:1px solid cyan;
+}
+
+.corner-image-bottom-left{
+  position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 600px;
+    z-index: -1;
+    /* right: 100px; */
+  
+}
+
+
+.my-gradient-border {
+    position: relative;
+    border: solid 4px transparent;
+
+    span {
+        // background: white;
+    width: auto;
+    display: flex;
+    // padding: 4%;
+    border: 20px;
+    border-radius: 10px;
+    }
+  }
+  
+  .my-border-section-gris{
+    border-radius: 10px;
+margin-top: 2px;
+border: 1px solid #818181;
+margin-left: 3px;
+    margin-right: 4px;
+  }
+  .my-gradient-border::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    z-index: -1;
+    border-radius: 10px;
+    background-image: linear-gradient(
+      to right,
+      #e2781c,
+      #f7da33 35%,
+      #a2fc35 65%,
+      #90fff6
+    );
+  }
+
+  .container-si-no{
+    padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        @include input-text;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        font-style: italic !important;
+    }
+  }
+
+  .titulo-seleccion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+    label {
+        @include texto-general-title;
+        font-size: 22px !important;
+    }
+  }
+
+  .elemento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    label {
+        @include texto-seleccion-label;
+    }
+    span {
+        @include input-text;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+
+
+
+  .container {
+    display: flex;
+    background: white;
+    justify-content: space-between;
+    padding: 7px;
+    border-radius: 9px;
+  }
+  
+  .columna {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .fila {
+        width: auto;
+        height: 35px;
+    }
+  }
+  
+  .espacio-vacio-border{
+    border-bottom: 1px solid gray;
+  }
