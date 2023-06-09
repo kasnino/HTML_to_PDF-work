@@ -1,8 +1,30 @@
 
+<%= image_tag wicked_pdf_asset_base64("CRUCES.png"), class:
+"corner-image-top-right", alt: "imagen de marco superior derecho" %>
+<div class="header">
+
+            <div class="logo">
+             <%= image_tag wicked_pdf_asset_base64("LOGO.png"), class:
+                "logo_header", alt: "logo header" %>
+            </div>
+            <div class="title"><span class="title-subrallado">health application</span>
+                <div class="container-subtitle">
+                    <div class="member-id">
+                        <%= image_tag wicked_pdf_asset_base64("tarjeta-de-visita.png"), class:
+                        "icono-svg-title", alt: "imagen icono tarjeta de visita" %>
+                      <span>Member ID: <%= @member_id %></span>
+                    </div>
+                    <div class="ffm-id"><span><i>FFM ID: </i><%= @ffm_id %></span></div>
+                  </div>
+            </div>
+                <div class="box-id-conatiner">
+                <div class="box-id"><i>CIG ID:</i><span class="cig_id--variable"><%= @cig_id %></span></div>
+            </div>
+        </div>
         <div class="content-main">
             <section class="my-gradient-border">
                 
-                <div class="container">
+        <!--        {# <div class="container">
                     <div class="columna columna1">
                       <div class="fila">
                         <div class="member-id">
@@ -159,7 +181,132 @@
                           
                         </div>
                       </div>
-                </div>
+                </div> #}-->
+                   <div class="container-seleccion container-first-card-info">
+                    <div class="fila">
+                      <!-- -->
+                      <div class="container-alineando-elementos-row" >
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("correo-electronico.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">Resident adress:</span>
+                        </div>
+                        <div class="espacio-vacio" style=" width: 27.5%;">
+                          <em class="pdf-variable"><%= @mailing_adress %></em>
+                        </div>
+
+                        <div  class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("building-silhouette.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">APT:</span>
+                        </div>
+                        <div class="espacio-vacio" style=" width: 8%;">
+                          <em class="pdf-variable"><%= @apt_%></em>
+                        </div>
+
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("mapa.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">CITY:</span>
+                        </div>
+                         <div class="espacio-vacio" style=" width: 15%;">
+                          <em class="pdf-variable"><%= @city_%></em>
+                        </div>
+
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("mapa.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">Country:</span>
+                        </div>
+                         <div class="espacio-vacio" style=" width: 17%;">
+                          <em class="pdf-variable"><%= @country_%></em>
+                        </div>
+
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("mapa.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">State:</span>
+                        </div>
+                         <div class="espacio-vacio" style=" width: 14.5%;">
+                          <em class="pdf-variable"><%= @city_%></em>
+                        </div>
+
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("codigo-postal.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">ZIP CODE:</span>
+                        </div>
+                        <div class="espacio-vacio" style=" width: 8%;">
+                          <em class="pdf-variable"><%= @zip_code%></em>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fila">
+                      <!-- -->
+                      <div class="container-alineando-elementos-row" >
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("correo-electronico.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">Mailing adress:</span>
+                        </div>
+                        <div class="espacio-vacio" style=" width: 29%;">
+                          <em class="pdf-variable"><%= @mailing_adress %></em>
+                        </div>
+
+                        <div  class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("building-silhouette.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">APT:</span>
+                        </div>
+                        <div class="espacio-vacio" style=" width: 8%;">
+                          <em class="pdf-variable"><%= @apt_ %></em>
+                        </div>
+
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("mapa.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">CITY:</span>
+                        </div>
+                         <div class="espacio-vacio" style=" width: 15%;">
+                          <em class="pdf-variable"><%= @city_ %></em>
+                        </div>
+
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("mapa.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">Country:</span>
+                        </div>
+                         <div class="espacio-vacio" style=" width: 17%;">
+                          <em class="pdf-variable"><%= @country_ %></em>
+                        </div>
+
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("mapa.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">State:</span>
+                        </div>
+                         <div class="espacio-vacio" style=" width: 14.5%;">
+                          <em class="pdf-variable"><%= @city_ %></em>
+                        </div>
+
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("codigo-postal.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">ZIP CODE:</span>
+                        </div>
+                        <div class="espacio-vacio" style=" width: 8%;">
+                          <em class="pdf-variable"><%= @zip_code %></em>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fila">
+                      <!-- -->
+                      <div class="container-alineando-elementos-row" >
+                        <div class="item_info_pdf">
+                          <%= image_tag wicked_pdf_asset_base64("telefono.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                          <span class="item-info">phone:</span>
+                        </div>
+                          <div class="espacio-vacio" style=" width: 32%;">
+                            <em class="pdf-variable"><%= @phone %></em>
+                          </div>
+                          <div class="item_info_pdf">
+                            <%= image_tag wicked_pdf_asset_base64("email.png"), class: "icono-svg", alt: "imagen icono tarjeta de visita" %>
+                            <span class="item-info">EMAIL:</span>
+                          </div>
+                          <div class="espacio-vacio " style=" width: auto;">
+                            <em class="pdf-variable no-capitalize"><%= @email %></em>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
             </section>
         
             <section class="my-gradient-border">
@@ -241,23 +388,33 @@
                     <div class="cliente-section" >
                       <span>Name:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 150px; "></div>
+                    <div class="espacio-vacio" style="width: 120px; ">
+                      <small class="pdf-variable-content-interno"><%= @name_client %></small>
+                    </div>
                     <div class="cliente-section">
                       <span>M-Name:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 140px; "></div>
+                    <div class="espacio-vacio" style="width: 140px; ">
+                      <small class="pdf-variable-content-interno"><%= @m_name_client %></small>
+                    </div>
                     <div class="cliente-section">
                        <span>Last Name:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 100px; "></div>
+                    <div class="espacio-vacio" style="width: 100px; ">
+                      <small class="pdf-variable-content-interno"><%= @last_name_client %></small>
+                    </div>
                     <div class="cliente-section">
                       <span>DOB:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 90px; "></div>
+                    <div class="espacio-vacio" style="width: 90px; ">
+                      <small class="pdf-variable-content-interno"><%= @dob_client %></small>
+                    </div>
                     <div class="cliente-section">
                       <span>Age:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 30px; "></div>
+                    <div class="espacio-vacio" style="width: 30px; ">
+                      <small class="pdf-variable-content-interno"><%= @age_client %></small>
+                    </div>
                     <!-- Repite los elementos de texto y espacio vacío según sea necesario -->
                   </div>
                   <!-- final de la fila 1-->
@@ -266,19 +423,27 @@
                     <div class="cliente-section" >
                       <span>Place of Birth:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 110px; "></div>
+                    <div class="espacio-vacio" style="width: 130px; ">
+                      <small class="pdf-variable-content-interno"><%= @place_birth_client %></small>
+                    </div>
                     <div class="cliente-section">
                       <span>Categoría:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 90px; "></div>
+                    <div class="espacio-vacio" style="width: 90px; ">
+                      <small class="pdf-variable-content-interno"><%= @categoria_client %></small>
+                    </div>
                     <div class="cliente-section">
                        <span>Civil Status :</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 90px; "></div>
+                    <div class="espacio-vacio" style="width: 90px; ">
+                      <small class="pdf-variable-content-interno"><%= @status_civil_client %></small>
+                    </div>
                     <div class="cliente-section">
                       <span>Driver License:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 90px; "></div>
+                    <div class="espacio-vacio" style="width: 90px; ">
+                      <small class="pdf-variable-content-interno"><%= @driver_license_client %></small>
+                    </div>
                    
                     <!-- Repite los elementos de texto y espacio vacío según sea necesario -->
                   </div>
@@ -287,23 +452,33 @@
                     <div class="cliente-section" >
                       <span>Peso:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 60px; "></div>
+                    <div class="espacio-vacio" style="width: 60px; ">
+                      <small class="pdf-variable-content-interno"><%= @peso_client %></small>
+                    </div>
                     <div class="cliente-section">
                       <span>Talla:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 50px; "></div>
+                    <div class="espacio-vacio" style="width: 50px; ">
+                      <small class="pdf-variable-content-interno"><%= @talla_client %></small>
+                    </div>
                     <div class="cliente-section">
                        <span>SSN:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 170px; "></div>
+                    <div class="espacio-vacio" style="width: 170px; ">
+                      <small class="pdf-variable-content-interno"><%= @ssn_client %></small>
+                    </div>
                     <div class="cliente-section">
                       <span>A#:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 150px; "></div>
+                    <div class="espacio-vacio" style="width: 150px; ">
+                      <small class="pdf-variable-content-interno"><%= @a_code_client %></small>
+                    </div>
                     <div class="cliente-section">
                       <span>Card:</span>
                     </div>
-                    <div class="espacio-vacio" style="width: 160px; "></div>
+                    <div class="espacio-vacio" style="width: 160px; ">
+                      <small class="pdf-variable-content-interno"><%= @card_client %></small>
+                    </div>
                     <!-- Repite los elementos de texto y espacio vacío según sea necesario -->
                   </div>
                   <!-- Fin fila 3 -->
@@ -311,7 +486,8 @@
             </section>
 
             <!-- Section dos -->
-            <section class="my-border-section-gris">
+         
+            <section class="my-border-section-gris" style="page-break-inside: avoid !important;" >
               <div class="container-seleccion">
                   <div class="fila">
                       <div class="titulo-seleccion">
@@ -336,7 +512,7 @@
                         <div class="container-si-no">
                          <span class="seleccionado-si-no">Si</span>
                         <label class="mi-radio">
-                          <input type="radio" name="opcion23" value="opcion23">
+                          <input type="radio" name="opcion23" value="opcion23" checked>
                           <span></span>
                         </label>
                        <span class="seleccionado-si-no">No</span>
@@ -386,29 +562,38 @@
                     </div> 
               </div>
         <!-- Aqui empieza la segunda fila -->
-                <div class="fila">
-                  <div class="cliente-section" >
-                    <span>Name:</span>
-                  </div>
-                  <div class="espacio-vacio" style="width: 165px; "></div>
-                  <div class="cliente-section">
-                    <span>M-Name:</span>
-                  </div>
-                  <div class="espacio-vacio" style="width: 160px; "></div>
-                  <div class="cliente-section">
-                     <span>Last Name:</span>
-                  </div>
-                  <div class="espacio-vacio" style="width: 115px; "></div>
-                  <div class="cliente-section">
-                    <span>DOB:</span>
-                  </div>
-                  <div class="espacio-vacio" style="width: 110px; "></div>
-                  <div class="cliente-section">
-                    <span>Age:</span>
-                  </div>
-                  <div class="espacio-vacio" style="width: 30px; "></div>
-                  <!-- Repite los elementos de texto y espacio vacío según sea necesario -->
-                </div>
+        <div class="fila">
+          <div class="cliente-section" >
+            <span>Name:</span>
+          </div>
+          <div class="espacio-vacio" style="width: 120px; ">
+            <small class="pdf-variable-content-interno"><%= @name_spouse %></small>
+          </div>
+          <div class="cliente-section">
+            <span>M-Name:</span>
+          </div>
+          <div class="espacio-vacio" style="width: 140px; ">
+            <small class="pdf-variable-content-interno"><%= @m_name_spouse %></small>
+          </div>
+          <div class="cliente-section">
+             <span>Last Name:</span>
+          </div>
+          <div class="espacio-vacio" style="width: 100px; ">
+            <small class="pdf-variable-content-interno"><%= @last_name_spouse %></small>
+          </div>
+          <div class="cliente-section">
+            <span>DOB:</span>
+          </div>
+          <div class="espacio-vacio" style="width: 90px; ">
+            <small class="pdf-variable-content-interno"><%= @dob_spouse %></small>
+          </div>
+          <div class="cliente-section">
+            <span>Age:</span>
+          </div>
+          <div class="espacio-vacio" style="width: 30px; ">
+            <small class="pdf-variable-content-interno"><%= @age_spouse %></small>
+          </div>
+        </div>
                 <!-- final de la fila 1-->
                 <!-- inicio de la fila 2-->
             
@@ -417,33 +602,44 @@
                   <div class="cliente-section" >
                     <span>Peso:</span>
                   </div>
-                  <div class="espacio-vacio" style="width: 40px; "></div>
+                  <div class="espacio-vacio" style="width: 40px; ">
+                    <small class="pdf-variable-content-interno"><%= @peso_spouse %></small>
+                  </div>
                   <div class="cliente-section">
                     <span>Talla:</span>
                   </div>
-                  <div class="espacio-vacio" style="width: 35px; "></div>
+                  <div class="espacio-vacio" style="width: 35px; ">
+                    <small class="pdf-variable-content-interno"><%= @talla_spouse %></small>
+                  </div>
                   <div class="cliente-section">
                      <span>SSN:</span>
                   </div>
-                  <div class="espacio-vacio" style="width: 160px; "></div>
+                  <div class="espacio-vacio" style="width: 160px; ">
+                    <small class="pdf-variable-content-interno"><%= @ssn_spouse %></small>
+                  </div>
                   <div class="cliente-section">
                     <span>A:</span>
                   </div>
-                  <div class="espacio-vacio" style="width: 150px; "></div>
+                  <div class="espacio-vacio" style="width: 120px; ">
+                    <small class="pdf-variable-content-interno"><%= @a_code_spouse %></small>
+                  </div>
                   <div class="cliente-section">
                     <span>Card:</span>
                   </div>
-                  <div class="espacio-vacio" style="width: 150px; "></div>
+                  <div class="espacio-vacio" style="width: 160px; ">
+                    <small class="pdf-variable-content-interno"><%= @card_spouse %></small>
+                  </div>
                   <!-- Repite los elementos de texto y espacio vacío según sea necesario -->
                 </div>
                 <!-- Fin fila 3 -->
               </div>
           </section>
+        
             <!-- Fin de Section dos-->
 
             <!--Section trea-->
             
-                <section class="my-border-section-gris">
+                <section class="my-border-section-gris" >
                   <div class="container-seleccion">
                       <div class="fila">
                           <div class="titulo-seleccion">
@@ -1042,7 +1238,7 @@
 
           <!-- Section ocho-->
           <section class="my-gradient-border" >
-            <div class="container-seleccion">
+            <div class="container-seleccion-card">
               <div class="fila">
                 <div class="cliente-section" >
                   <span>Company:</span>
@@ -1072,7 +1268,7 @@
         
         </div>
         <div class="footer">
-          <section class="section-container-Accountn">
+          <section class="section-container-Accountn" >
             <section class="my-border-section" style="width:21%;">
               <div class="container-seleccion border-interno-box-footer">
                 <div class="fila">
@@ -1119,15 +1315,15 @@
                 </div>
               </div>
             </section>
-            <section class="my-container-footer" style="width:80%;">
-              <div class="container-seleccion" style="margin-left:1%;">
+            <section class="my-container-footer" style="width:80%; height:100%; ">
+              <div class="container-seleccion-footer" style="margin-left:1%;">
                 <div class="fila">
-                  <span class="text-footer">
+                  <span class="text-footer ">
                   Firmo autorizando a mi Agente a procesar mi solicitud y comprendo que debo permanecer un período mínimo de un año con el Seguro suscrito. 
                   I sign authorizing my Agent to process my application and I understand that I must stay a minimum period of one year with the Insurance subscrited. 
                   </span>
                 </div>
-                <div class="fila " style="padding-top: 2.5%; padding-bottom:2.5%;">
+                <div class="fila " style="padding-top: 3.5%; padding-bottom:3.5%;">
                   <div class="cliente-section" >
                     <span class="text-footer">Fecha/Date:</span>
                   </div>
@@ -1151,8 +1347,10 @@
             </section>
           </section>
         </div>
-      
+   
             
-           
+        <%= image_tag wicked_pdf_asset_base64("imagen-footer.png"), class:
+        "corner-image-bottom-left", alt: "imagen de marco inferior
+        izquierdo" %>
 
       

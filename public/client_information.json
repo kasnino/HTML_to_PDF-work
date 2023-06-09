@@ -1,0 +1,54 @@
+[
+    {
+        "title_card": "Spouse",
+        "name": "María",
+        "m_name": "Elena",
+        "last_name": "García",
+        "dob": "02/02/1992",
+        "age": "29",
+        "peso": "65 kg",
+        "talla": "1.70 m",
+        "ssn": "987-65-4321",
+        "a_code": "A7654321",
+        "card": "5678 9012 3456 7890"
+    },
+    {
+        "title_card": "Dep1",
+        "name": "Juan",
+        "m_name": "Carlos",
+        "last_name": "García",
+        "dob": "03/03/2010",
+        "age": "11",
+        "peso": "40 kg",
+        "talla": "1.40 m",
+        "ssn": "",
+        "a_code": "",
+        "card": ""
+    },
+    {
+        "title_card": "Dep1",
+        "name": "Juan",
+        "m_name": "Carlos",
+        "last_name": "García",
+        "dob": "03/03/2010",
+        "age": "11",
+        "peso": "40 kg",
+        "talla": "1.40 m",
+        "ssn": "",
+        "a_code": "",
+        "card": ""
+    },
+    {
+        "title_card": "Dep1",
+        "name": "Juan",
+        "m_name": "Carlos",
+        "last_name": "García",
+        "dob": "03/03/2010",
+        "age": "11",
+        "peso": "40 kg",
+        "talla": "1.40 m",
+        "ssn": "",
+        "a_code": "",
+        "card": ""
+    }
+]
