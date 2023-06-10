@@ -151,7 +151,7 @@ html {
 }
 .container-seleccion {
     display: -webkit-box;
-  background: white;
+  // background: white;
   -webkit-box-pack: justify;
   padding-top: 7px;
   padding-left: 4px;
@@ -387,6 +387,8 @@ html {
   position: relative;
   border: solid 4px transparent;
   margin-top: 3px;
+  width: 100%;
+  height: auto;
   span {
     // background: white;
     width: auto;
@@ -401,8 +403,8 @@ html {
   border-radius: 10px;
   margin-top: 7px;
   border: 1px solid #818181;
-  margin-left: 3px;
-  margin-right: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
   page-break-inside: avoid !important;
 }
 .my-gradient-border::before {
@@ -414,15 +416,35 @@ html {
   left: -1px;
   z-index: -1;
   border-radius: 10px;
-  background-image: linear-gradient(
-    to right,
-    #e2781c,
-    #f7da33 35%,
-    #a2fc35 65%,
-    #90fff6
-  );
+  background: url('../images/border-card.png');
+  // background-image: linear-gradient(
+  //   to right,
+  //   #e2781c,
+  //   #f7da33 35%,
+  //   #a2fc35 65%,
+  //   #90fff6
+  // );
 }
 
+.container-border-colorido{
+  width: 100%;
+  height: auto;
+  position: relative;
+  
+  box-sizing: content-box;
+}
+
+.my-gradient-border-colorido{
+  position: absolute;
+  top: -6%;
+  width: 100%;
+}
+
+.border_colorido{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
 .container-si-no {
   padding-left: 7px;
   padding-right: 7px;
@@ -504,7 +526,7 @@ html {
 
 .container {
     display: -webkit-box;
-  background: white;
+  // background: white;
   -webkit-box-pack: justify;
   padding-top: 7px;
   padding-left: 7px;
