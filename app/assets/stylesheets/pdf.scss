@@ -6,12 +6,12 @@
 
 @font-face {
   font-family: "Calibri Regular";
-  src: url("assets/font/Calibri-Regular.ttf");
+  src: font-url('Calibri-Regular.ttf');
 }
 
 @font-face {
   font-family: "BebasNeue Regular";
-  src: url("assets/font/bebas-neue-pro-bold-italic.otf");
+  src: font-url('bebas-neue-pro-bold-italic.otf');
 }
 
 body,
@@ -44,7 +44,7 @@ html {
   text-transform: uppercase;
   color: #818181;
   font-weight: bold;
-  font-family: "Calibri Regular", sans-serif;
+  // font-family: "Calibri Regular", sans-serif;
   white-space: nowrap;
   font-style: italic !important;
 }
@@ -55,8 +55,8 @@ html {
   color: #2d4c7b;
   font-weight: 500;
   text-transform: capitalize;
-  font-family: "Calibri Regular", sans-serif;
-  display: flex;
+  // font-family: "Calibri Regular", sans-serif;
+    display: -webkit-box;
   white-space: nowrap;
 }
 
@@ -66,8 +66,8 @@ html {
   color: #2d4c7b;
   font-weight: 500;
   text-transform: capitalize;
-  font-family: "Calibri Regular", sans-serif;
-  display: flex;
+  // font-family: "Calibri Regular", sans-serif;
+    display: -webkit-box;
   white-space: nowrap;
 }
 @mixin text-variable-pdf {
@@ -76,8 +76,8 @@ html {
   color: #2d4c7b;
   font-weight: 500;
   text-transform: capitalize;
-  font-family: "Calibri Regular", sans-serif;
-  display: flex;
+  // font-family: "Calibri Regular";
+    display: -webkit-box;
   white-space: nowrap;
 }
 
@@ -86,8 +86,8 @@ html {
   line-height: 18px;
   color: #2d4c7b;
   font-weight: 500;
-  font-family: "Calibri Regular", sans-serif;
-  display: flex;
+  // font-family: "Calibri Regular";
+    display: -webkit-box;
 }
 
 .text-footer {
@@ -137,8 +137,8 @@ html {
   background-color: #2d4c7b;
   /* Centra el círculo lleno dentro del círculo vacío */
   position: absolute !important;
-  top: 36.5%;
-  left: 52%;
+  top: 44%;
+  left: 53%;
 }
 
 .border-interno-box-footer {
@@ -150,18 +150,18 @@ html {
   padding-bottom: 7%;
 }
 .container-seleccion {
-  display: flex;
+    display: -webkit-box;
   background: white;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
   padding-top: 7px;
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 9px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
 
   .fila {
-    display: flex;
-    justify-content: space-between;
+      display: -webkit-box;
+    -webkit-box-pack: justify;
     width: 100%;
     padding-top: 3px;
 
@@ -174,19 +174,19 @@ html {
 }
 
 .container-seleccion-card {
-  display: flex;
+    display: -webkit-box;
   background: white;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 9px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
 
   .fila {
-    display: flex;
-    justify-content: space-between;
+      display: -webkit-box;
+    -webkit-box-pack: justify;
     width: 100%;
     padding-top: 3px;
 
@@ -205,14 +205,14 @@ html {
 }
 
 .container-seleccion-footer {
-  display: flex;
-  justify-content: space-between;
+    display: -webkit-box;
+  -webkit-box-pack: justify;
   padding: 7px;
   border-radius: 9px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
   .fila {
-    display: flex;
-    justify-content: space-between;
+      display: -webkit-box;
+    -webkit-box-pack: justify;
     width: 100%;
     padding-top: 2px;
 
@@ -225,14 +225,14 @@ html {
 }
 
 .container-align-section-filaUno {
-  display: flex;
+    display: -webkit-box;
 }
 
 .header {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  // align-items: center;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  // -webkit-box-align: center;
   margin-left: 63px;
   margin-right: 63px;
   padding-top: 1.4%;
@@ -243,20 +243,21 @@ html {
 }
 
 .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: -webkit-box;
+ -webkit-box-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-orient: vertical;
   padding-top: 2%;
 }
 
+
 .member-id {
-  display: flex;
+    display: -webkit-box;
   justify-content: flex-start;
-  align-items: center;
+  -webkit-box-align: center;
   gap: 5px;
   margin-left: 3px;
-
+  white-space: nowrap;
   .icono-svg-title {
     width: 33px;
     height: auto;
@@ -277,6 +278,7 @@ html {
 .ffm-id {
   span {
     @include texto-general-title;
+        white-space: nowrap;
   }
 }
 .box-id-conatiner {
@@ -289,9 +291,9 @@ html {
 .box-id {
   width: 100%;
   text-align: center;
-  display: flex;
+    display: -webkit-box;
   justify-content: flex-start;
-  align-items: center;
+  -webkit-box-align: center;
   // padding: 4px;
   // height: 38px;
   border-radius: 10px;
@@ -315,12 +317,13 @@ html {
   font-style: italic;
   padding-left: 13px;
   padding-right: 13px;
+  white-space: nowrap;
 }
 
 .container-subtitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
   width: 100%;
   text-align: center;
   padding-top: 4px;
@@ -343,8 +346,8 @@ html {
   height: auto;
 }
 .content-main {
-  display: flex;
-  flex-direction: column;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
   height: 100%;
   // border: 2px solid grey;
   margin-left: 8.5%;
@@ -353,15 +356,15 @@ html {
 }
 
 .section-container-Accountn {
-  display: flex;
-  // flex-direction: column;
+    display: -webkit-box;
+  // -webkit-box-orient: vertical;
 }
 
 .footer {
   position: relative;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
   height: 100%;
   margin-left: 9%;
   margin-right: 4%;
@@ -387,7 +390,7 @@ html {
   span {
     // background: white;
     width: auto;
-    display: flex;
+      display: -webkit-box;
     // padding: 4%;
     border: 20px;
     border-radius: 10px;
@@ -423,24 +426,24 @@ html {
 .container-si-no {
   padding-left: 7px;
   padding-right: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: -webkit-box;
+ -webkit-box-pack: center;
+  -webkit-box-align: center;
 
   span {
     @include input-text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      display: -webkit-box;
+   -webkit-box-pack: center;
+    -webkit-box-align: center;
     padding: 4px;
     font-style: italic !important;
   }
 }
 
 .titulo-seleccion {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
   width: 170px;
   label {
     @include texto-general-title;
@@ -449,16 +452,16 @@ html {
 }
 
 .container-alineando-elementos-row {
-  display: flex;
+    display: -webkit-box;
   // justify-content: space-between;
-  align-items: center;
+  -webkit-box-align: center;
   width: 100%;
   padding-top: 6px;
   padding-bottom: 1px;
   .item_info_pdf {
-    display: flex;
+      display: -webkit-box;
     justify-content: flex-start;
-    align-items: center;
+    -webkit-box-align: center;
     gap: 5px;
     margin-left: 3px;
 
@@ -484,33 +487,33 @@ html {
 }
 
 .elemento {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: -webkit-box;
+ -webkit-box-pack: center;
+  -webkit-box-align: center;
 
   label {
     @include texto-seleccion-label;
   }
   span {
     @include input-text;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      display: -webkit-box;
+   -webkit-box-pack: center;
+    -webkit-box-align: center;
   }
 }
 
 .container {
-  display: flex;
+    display: -webkit-box;
   background: white;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
   padding-top: 7px;
   padding-left: 7px;
   border-radius: 9px;
 }
 
 .columna {
-  display: flex;
-  flex-direction: column;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
   width: 100%;
 
   .fila {
@@ -524,7 +527,14 @@ html {
 }
 
 .pdf-variable {
-  @include text-variable-pdf;
+  font-size: 13.5px;
+  line-height: 23px;
+  color: #2d4c7b;
+  font-weight: 500;
+  text-transform: capitalize;
+  // font-family: "Calibri Regular", sans-serif;
+    display: -webkit-box;
+  white-space: nowrap;
   padding-left: 2px;
   margin-top: 4px;
   white-space: nowrap;
@@ -539,7 +549,14 @@ html {
 }
 
 .pdf-variable-content-interno {
-  @include text-variable-pdf;
+  font-size: 13.5px;
+  line-height: 23px;
+  color: #2d4c7b;
+  font-weight: 500;
+  text-transform: capitalize;
+  // font-family: "Calibri Regular", sans-serif;
+    display: -webkit-box;
+  white-space: nowrap;
   padding-left: 2px;
 }
 
