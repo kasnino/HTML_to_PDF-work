@@ -1011,7 +1011,10 @@
 
           <!--Section Siete dos columnas con info-->
           <section class="section-container-Accountn">
-            <section class="my-gradient-border" style="width:40%;">
+            <div class="container-border-colorido-left">
+              <%= image_tag wicked_pdf_asset_base64("border_left.png"), class:
+              "border_colorido-left", alt: "border colorido" %>
+            <section class="my-gradient-border-colorido" style="width:40%;">
               <div class="container-seleccion">
                 <div class="fila">
                   <div class="cliente-section" >
@@ -1040,7 +1043,12 @@
                 </div>
               </div>
             </section>
-            <section class="my-gradient-border"  style="width:58%;">
+            </div>
+
+            <div class="container-border-colorido-right">
+              <%= image_tag wicked_pdf_asset_base64("border_right.png"), class:
+              "border_colorido-right", alt: "border colorido" %>
+            <section class="my-gradient-border-colorido"  style="width:58%;">
               <div class="container-seleccion">  
                 <div class="fila">
                   <div class="cliente-section" >
@@ -1081,11 +1089,16 @@
                 </div>
               </div>
             </section>
+            </div>
           </section>
           <!-- Fin de la section Siete y las dos Columnas-->
 
           <!-- Section ocho-->
-          <section class="my-gradient-border" >
+          <div class="container-border-colorido">
+            <%= image_tag wicked_pdf_asset_base64("border-company.png"), class:
+            "border_colorido", alt: "border colorido" %>
+            
+          <section class="my-gradient-border-colorido-company" style="">
             <div class="container-seleccion-card">
               <div class="fila">
                 <div class="cliente-section" >
@@ -1113,7 +1126,7 @@
             </div>
           </section>
           <!--Fin de la section ocho-->
-        
+        </div>
         </div>
         <div class="footer">
           <section class="section-container-Accountn" >

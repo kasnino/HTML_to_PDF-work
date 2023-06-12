@@ -28,70 +28,13 @@ html {
   margin-bottom: 0px !important;
 }
 
-@mixin texto-general-title {
-  font-size: 16px;
-  // line-height: 25px;
-  text-transform: uppercase;
-  color: #2d4c7b;
-  font-weight: 400;
-  font-family: "Bebas Neue", sans-serif;
-  font-style: italic !important;
-}
-
-@mixin texto-seleccion-label {
-  font-size: 12px;
-  line-height: 25px;
-  text-transform: uppercase;
-  color: #818181;
-  font-weight: bold;
-  // font-family: "Calibri Regular", sans-serif;
-  white-space: nowrap;
-  font-style: italic !important;
-}
-
-@mixin input-text {
-  font-size: 15px;
-  line-height: 23px;
-  color: #2d4c7b;
-  font-weight: 500;
-  text-transform: capitalize;
-  // font-family: "Calibri Regular", sans-serif;
-    display: -webkit-box;
-  white-space: nowrap;
-}
-
-@mixin card-text {
-  font-size: 13px;
-  line-height: 23px;
-  color: #2d4c7b;
-  font-weight: 500;
-  text-transform: capitalize;
-  // font-family: "Calibri Regular", sans-serif;
-    display: -webkit-box;
-  white-space: nowrap;
-}
-@mixin text-variable-pdf {
-  font-size: 13.5px;
-  line-height: 23px;
-  color: #2d4c7b;
-  font-weight: 500;
-  text-transform: capitalize;
-  // font-family: "Calibri Regular";
-    display: -webkit-box;
-  white-space: nowrap;
-}
-
-@mixin texto-footer {
+.text-footer {
   font-size: 11.5px;
   line-height: 18px;
   color: #2d4c7b;
   font-weight: 500;
   // font-family: "Calibri Regular";
     display: -webkit-box;
-}
-
-.text-footer {
-  @include texto-footer;
 }
 
 .no-capitalize {
@@ -166,7 +109,14 @@ html {
     padding-top: 3px;
 
     div span {
-      @include input-text;
+      font-size: 15px;
+  line-height: 23px;
+  color: #2d4c7b;
+  font-weight: 500;
+  text-transform: capitalize;
+  // font-family: "Calibri Regular", sans-serif;
+    display: -webkit-box;
+  white-space: nowrap;
       padding-right: 2px;
       padding-left: 2px;
     }
@@ -175,7 +125,6 @@ html {
 
 .container-seleccion-card {
     display: -webkit-box;
-  background: white;
   -webkit-box-pack: justify;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -191,7 +140,14 @@ html {
     padding-top: 3px;
 
     div span {
-      @include card-text;
+      font-size: 13px;
+  line-height: 23px;
+  color: #2d4c7b;
+  font-weight: 500;
+  text-transform: capitalize;
+  // font-family: "Calibri Regular", sans-serif;
+    display: -webkit-box;
+  white-space: nowrap;
       padding-right: 2px;
       padding-left: 2px;
     }
@@ -217,7 +173,14 @@ html {
     padding-top: 2px;
 
     div span {
-      @include input-text;
+      font-size: 15px;
+      line-height: 23px;
+      color: #2d4c7b;
+      font-weight: 500;
+      text-transform: capitalize;
+      // font-family: "Calibri Regular", sans-serif;
+        display: -webkit-box;
+      white-space: nowrap;
       padding-right: 2px;
       padding-left: 2px;
     }
@@ -269,7 +232,13 @@ html {
   }
 
   span {
-    @include texto-general-title;
+    font-size: 16px;
+  // line-height: 25px;
+  text-transform: uppercase;
+  color: #2d4c7b;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: italic !important;
     padding-left: 5px;
     white-space: nowrap;
   }
@@ -277,7 +246,13 @@ html {
 
 .ffm-id {
   span {
-    @include texto-general-title;
+    font-size: 16px;
+    // line-height: 25px;
+    text-transform: uppercase;
+    color: #2d4c7b;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: italic !important;
         white-space: nowrap;
   }
 }
@@ -357,6 +332,7 @@ html {
 
 .section-container-Accountn {
     display: -webkit-box;
+    padding-top: 7px;
   // -webkit-box-orient: vertical;
 }
 
@@ -417,26 +393,39 @@ html {
   z-index: -1;
   border-radius: 10px;
   background: url('../images/border-card.png');
-  // background-image: linear-gradient(
-  //   to right,
-  //   #e2781c,
-  //   #f7da33 35%,
-  //   #a2fc35 65%,
-  //   #90fff6
-  // );
 }
 
 .container-border-colorido{
   width: 100%;
   height: auto;
-  position: relative;
-  
+  position: relative; 
   box-sizing: content-box;
+}
+
+.container-border-colorido-left{
+  height: auto;
+  position: relative; 
+  box-sizing: content-box;
+  width: 42%;
+}
+
+.container-border-colorido-right{
+  height: auto;
+  position: relative; 
+  box-sizing: content-box;
+  width: 57%;
+  padding-left: 1%;
 }
 
 .my-gradient-border-colorido{
   position: absolute;
-  top: -6%;
+  top: -4%;
+  width: 100%;
+}
+
+.my-gradient-border-colorido-company{
+  position: absolute;
+  top: 4%;
   width: 100%;
 }
 
@@ -445,6 +434,25 @@ html {
   height: auto;
   position: relative;
 }
+
+.border_colorido_account{
+  width: 100%;
+  height: auto;
+  position: relative;
+  
+}
+.border_colorido-left{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.border_colorido-right{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
 .container-si-no {
   padding-left: 7px;
   padding-right: 7px;
@@ -453,7 +461,14 @@ html {
   -webkit-box-align: center;
 
   span {
-    @include input-text;
+    font-size: 15px;
+    line-height: 23px;
+    color: #2d4c7b;
+    font-weight: 500;
+    text-transform: capitalize;
+    // font-family: "Calibri Regular", sans-serif;
+      display: -webkit-box;
+    white-space: nowrap;
       display: -webkit-box;
    -webkit-box-pack: center;
     -webkit-box-align: center;
@@ -468,7 +483,13 @@ html {
   -webkit-box-align: center;
   width: 170px;
   label {
-    @include texto-general-title;
+    font-size: 16px;
+  // line-height: 25px;
+  text-transform: uppercase;
+  color: #2d4c7b;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: italic !important;
     font-size: 22px !important;
   }
 }
@@ -498,7 +519,13 @@ html {
     }
 
     .item-info {
-      @include texto-general-title;
+      font-size: 16px;
+      // line-height: 25px;
+      text-transform: uppercase;
+      color: #2d4c7b;
+      font-weight: 400;
+      font-family: "Bebas Neue", sans-serif;
+      font-style: italic !important;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -514,10 +541,24 @@ html {
   -webkit-box-align: center;
 
   label {
-    @include texto-seleccion-label;
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #818181;
+    font-weight: bold;
+    // font-family: "Calibri Regular", sans-serif;
+    white-space: nowrap;
+    font-style: italic !important;
   }
   span {
-    @include input-text;
+    font-size: 15px;
+    line-height: 23px;
+    color: #2d4c7b;
+    font-weight: 500;
+    text-transform: capitalize;
+    // font-family: "Calibri Regular", sans-serif;
+      display: -webkit-box;
+    white-space: nowrap;
       display: -webkit-box;
    -webkit-box-pack: center;
     -webkit-box-align: center;
