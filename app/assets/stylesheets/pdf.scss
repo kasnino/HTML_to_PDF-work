@@ -6,7 +6,11 @@
 
 @font-face {
   font-family: "Calibri Regular";
-  src: font-url('Calibri-Regular.ttf');
+  src: url('Calibri-Regular.eot'); /* IE9 Compat Modes */
+  src: url('Calibri-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Calibri-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Calibri-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Calibri-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 @font-face {
@@ -22,19 +26,17 @@ html {
   max-width: 100%;
   position: relative;
   overflow-x: hidden;
-  // overflow: hidden;
-  // overflow-y: hidden;
   padding: 0px !important;
   margin-bottom: 0px !important;
 }
 
 .text-footer {
-  font-size: 11.5px;
-  line-height: 18px;
+  font-size: 10.5px;
+  line-height: 16px;
   color: #2d4c7b;
   font-weight: 500;
   // font-family: "Calibri Regular";
-    display: -webkit-box;
+    
 }
 
 .no-capitalize {
@@ -80,7 +82,7 @@ html {
   background-color: #2d4c7b;
   /* Centra el círculo lleno dentro del círculo vacío */
   position: absolute !important;
-  top: 44%;
+  top: 43%;
   left: 53%;
 }
 
@@ -93,18 +95,18 @@ html {
   padding-bottom: 7%;
 }
 .container-seleccion {
-    display: -webkit-box;
+    
   // background: white;
-  -webkit-box-pack: justify;
+ 
   padding-top: 7px;
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 9px;
-  -webkit-box-orient: vertical;
+ 
 
   .fila {
-      display: -webkit-box;
-    -webkit-box-pack: justify;
+
+   
     width: 100%;
     padding-top: 3px;
 
@@ -114,8 +116,7 @@ html {
   color: #2d4c7b;
   font-weight: 500;
   text-transform: capitalize;
-  // font-family: "Calibri Regular", sans-serif;
-    display: -webkit-box;
+  font-family: "Calibri Regular", sans-serif;
   white-space: nowrap;
       padding-right: 2px;
       padding-left: 2px;
@@ -124,18 +125,18 @@ html {
 }
 
 .container-seleccion-card {
-    display: -webkit-box;
-  -webkit-box-pack: justify;
+    
+ 
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 9px;
-  -webkit-box-orient: vertical;
+ 
 
   .fila {
-      display: -webkit-box;
-    -webkit-box-pack: justify;
+
+   
     width: 100%;
     padding-top: 3px;
 
@@ -146,7 +147,7 @@ html {
   font-weight: 500;
   text-transform: capitalize;
   // font-family: "Calibri Regular", sans-serif;
-    display: -webkit-box;
+  font-family: "Calibri Regular";
   white-space: nowrap;
       padding-right: 2px;
       padding-left: 2px;
@@ -161,25 +162,25 @@ html {
 }
 
 .container-seleccion-footer {
-    display: -webkit-box;
-  -webkit-box-pack: justify;
-  padding: 7px;
+    
+ 
+  padding-left: 7px;
   border-radius: 9px;
-  -webkit-box-orient: vertical;
+ 
   .fila {
-      display: -webkit-box;
-    -webkit-box-pack: justify;
+
+   
     width: 100%;
     padding-top: 2px;
 
     div span {
-      font-size: 15px;
-      line-height: 23px;
+      font-size: 11px;
+      line-height: 21px;
       color: #2d4c7b;
       font-weight: 500;
       text-transform: capitalize;
       // font-family: "Calibri Regular", sans-serif;
-        display: -webkit-box;
+  
       white-space: nowrap;
       padding-right: 2px;
       padding-left: 2px;
@@ -187,15 +188,93 @@ html {
   }
 }
 
-.container-align-section-filaUno {
-    display: -webkit-box;
+.row-data-client{
+  position: relative;
+}
+
+.income-data-bank{
+position: relative;
+}
+
+.item-income-data{
+  position:absolute;
+}
+.row-data-bank{
+  position: relative;
+}
+
+.container-align-section-citizen {
+  position: absolute;
+  top: 1%;
+  left: 49.5%;
+  
+}
+
+.client-section-border{
+  margin-top: 4px;
+}
+
+.citizen-top-input-first{
+  position: absolute;
+  top: 1%;
+  left:54px;
+}
+
+.resident-top-input-first{
+  position: absolute;
+  top: 1%;
+  left:69px;
+}
+
+.employee-top-input-first{
+  position: absolute;
+  top: 1%;
+  left:115px;
+}
+
+.others-top-input-first{
+  position: absolute;
+  top: 1%;
+  left:59px;
+}
+
+.resident-top-left{
+  position: absolute;
+    left: 80px;
+    top: 0%;
+    
+}
+
+.employee-top-left{
+  position: absolute;
+    top: 1%;
+    left: 178px;
+}
+
+.others-top-left{
+  position: absolute;
+    top: 1%;
+    left: 322px;
+}
+
+.element-unique-client{
+    position: absolute;
+    top: 0%;
+    left: 26%;
+}
+
+.cobertura-top-left{
+  top: 1%;
+  width: 100px;
+position: absolute;
+left: 85px;
 }
 
 .header {
   position: relative;
-  display: -webkit-box;
-  -webkit-box-pack: justify;
-  // -webkit-box-align: center;
+  height: 140px;
+ 
+  //
   margin-left: 63px;
   margin-right: 63px;
   padding-top: 1.4%;
@@ -203,21 +282,22 @@ html {
 
 .logo {
   padding-top: 1%;
+  position: absolute;
+  left: 0%;
 }
 
 .title {
-    display: -webkit-box;
- -webkit-box-pack: center;
-  -webkit-box-align: center;
-  -webkit-box-orient: vertical;
+    
+ position:absolute;
+ left: 50%;
+ transform: translateX(-50%);
   padding-top: 2%;
 }
 
 
 .member-id {
-    display: -webkit-box;
-  justify-content: flex-start;
-  -webkit-box-align: center;
+    
+position: absolute;
   gap: 5px;
   margin-left: 3px;
   white-space: nowrap;
@@ -245,6 +325,9 @@ html {
 }
 
 .ffm-id {
+  position: absolute;
+  right: 0px;
+  top:12px;
   span {
     font-size: 16px;
     // line-height: 25px;
@@ -261,14 +344,16 @@ html {
   height: 100%;
   width: 22%;
   padding: 5px;
+  position: absolute;
+  right: 0%;
   box-sizing: border-box;
 }
 .box-id {
   width: 100%;
   text-align: center;
-    display: -webkit-box;
-  justify-content: flex-start;
-  -webkit-box-align: center;
+    
+ 
+ 
   // padding: 4px;
   // height: 38px;
   border-radius: 10px;
@@ -296,9 +381,8 @@ html {
 }
 
 .container-subtitle {
-    display: -webkit-box;
-  -webkit-box-pack: justify;
-  -webkit-box-align: center;
+    
+position: relative;
   width: 100%;
   text-align: center;
   padding-top: 4px;
@@ -321,8 +405,8 @@ html {
   height: auto;
 }
 .content-main {
-    display: -webkit-box;
-  -webkit-box-orient: vertical;
+    
+ 
   height: 100%;
   // border: 2px solid grey;
   margin-left: 8.5%;
@@ -331,16 +415,111 @@ html {
 }
 
 .section-container-Accountn {
-    display: -webkit-box;
+    position: relative;
     padding-top: 7px;
-  // -webkit-box-orient: vertical;
+    height: 105px;
+  //
 }
 
+.item-footer-up{
+  position:absolute
+}
+
+.row-footer-account{
+  position:relative;
+}
+
+.item-row-left-footer-account{
+  position: absolute;
+  left: 0px;
+}
+
+.item-row-footer-account{
+  position: absolute;
+  right: 0px;
+  top: 20px;
+}
+
+.date-footer-up{
+position: relative;
+}
+
+.section-container-Accountn-footer{
+  position: relative;
+  padding-top: 7px;
+  height: 200px;
+}
+
+.item-footer-up{
+  position:absolute;
+
+}
+.box-left-account{
+position: absolute;
+left: 0%;
+
+width: 49.5%;
+}
+
+.box-right-account{
+position: absolute;
+right: 0%;
+
+width: 49%
+}
+
+.item-bank-second-up{
+position:absolute;
+top:30px;
+}
+
+.row-company{
+  position: relative;
+}
+
+.item-bank-up{
+  position: absolute;
+  top:2%;
+}
+.row-card-bank{
+  padding-top: 10px;
+  position: relative;
+}
+.item-company-up{
+  position: absolute;
+  top: 4px;
+}
+
+.row-empleador-up{
+  position:relative;
+}
+
+.account-data-bank{
+  position: relative;
+}
+
+.item-account-up{
+  position: absolute;
+}
+
+.item-empleador-second-up{
+  position: absolute;
+  top: 30px;
+
+}
+
+.row-empleador-second-up{
+  position: relative;
+}
+
+.item-empleador-up{
+  position:absolute;
+}
 .footer {
   position: relative;
   height: 100%;
-    display: -webkit-box;
-  -webkit-box-orient: vertical;
+    
+ 
   height: 100%;
   margin-left: 9%;
   margin-right: 4%;
@@ -368,7 +547,7 @@ html {
   span {
     // background: white;
     width: auto;
-      display: -webkit-box;
+
     // padding: 4%;
     border: 20px;
     border-radius: 10px;
@@ -382,6 +561,7 @@ html {
   margin-left: 0px;
   margin-right: 0px;
   page-break-inside: avoid !important;
+  height: 94px;
 }
 .my-gradient-border::before {
   content: "";
@@ -406,15 +586,15 @@ html {
   height: auto;
   position: relative; 
   box-sizing: content-box;
-  width: 42%;
+  width: 100%;
 }
 
 .container-border-colorido-right{
   height: auto;
   position: relative; 
   box-sizing: content-box;
-  width: 57%;
-  padding-left: 1%;
+  width: 100%;
+  padding-left: 0%;
 }
 
 .my-gradient-border-colorido{
@@ -425,7 +605,7 @@ html {
 
 .my-gradient-border-colorido-company{
   position: absolute;
-  top: 4%;
+  top: 4.5%;
   width: 100%;
 }
 
@@ -443,22 +623,22 @@ html {
 }
 .border_colorido-left{
   width: 100%;
-  height: auto;
+  height: 93px;
   position: relative;
 }
 
 .border_colorido-right{
   width: 100%;
-  height: auto;
+  height: 93px;
   position: relative;
 }
 
 .container-si-no {
-  padding-left: 7px;
-  padding-right: 7px;
-    display: -webkit-box;
+  padding-left: 0px;
+  padding-right: 0px;
+    
  -webkit-box-pack: center;
-  -webkit-box-align: center;
+ 
 
   span {
     font-size: 15px;
@@ -467,21 +647,20 @@ html {
     font-weight: 500;
     text-transform: capitalize;
     // font-family: "Calibri Regular", sans-serif;
-      display: -webkit-box;
+
     white-space: nowrap;
-      display: -webkit-box;
    -webkit-box-pack: center;
-    -webkit-box-align: center;
+   
     padding: 4px;
     font-style: italic !important;
   }
 }
 
 .titulo-seleccion {
-    display: -webkit-box;
-  -webkit-box-pack: justify;
-  -webkit-box-align: center;
-  width: 170px;
+    
+ 
+ 
+  width: 0px;
   label {
     font-size: 16px;
   // line-height: 25px;
@@ -494,27 +673,78 @@ html {
   }
 }
 
+.row-client
+{
+  position: relative;
+
+  .espacio-vacio{
+    position: absolute;
+    height: 2%;
+    left: 7%;
+    top: 1.2%;
+  }
+
+  .option-client{
+    position: absolute;
+    top: 1%;
+    left: 10.5%;
+    width:88px;
+  }
+}
+
+.fila-interna-superior{
+  height: 25px;
+}
+
+.elemento-fila-interna-up{
+  position: absolute;
+  top: 25%;
+}
+
+.item_info_pdf-fila-up{
+  position: absolute;
+  top: 25%;
+}
+
+.item_info_pdf-data-client-up{
+  position: absolute;
+  top: 4px;
+
+}
+
+.item_info_pdf-data-client-second-up{
+  position: absolute;
+  top: 28px;
+}
+
+.item_info_pdf-data-client-row-tres-up{
+  position: absolute;
+  top: 51px;
+}
+
 .container-alineando-elementos-row {
-    display: -webkit-box;
-  // justify-content: space-between;
-  -webkit-box-align: center;
+  position: relative;    
   width: 100%;
   padding-top: 6px;
   padding-bottom: 1px;
   .item_info_pdf {
-      display: -webkit-box;
-    justify-content: flex-start;
-    -webkit-box-align: center;
+
+   
+   
     gap: 5px;
     margin-left: 3px;
 
     .icono-svg-title {
-      width: 33px;
+      width: 28px;
       height: auto;
     }
 
     .icono-svg {
       width: 18px;
+      height: auto;
+    }
+    .icono-svg-edificio{
+      width: 14px;
       height: auto;
     }
 
@@ -536,12 +766,12 @@ html {
 }
 
 .elemento {
-    display: -webkit-box;
+    
  -webkit-box-pack: center;
-  -webkit-box-align: center;
+ 
 
   label {
-    font-size: 12px;
+    font-size: 10.5px;
     line-height: 25px;
     text-transform: uppercase;
     color: #818181;
@@ -557,26 +787,26 @@ html {
     font-weight: 500;
     text-transform: capitalize;
     // font-family: "Calibri Regular", sans-serif;
-      display: -webkit-box;
+
     white-space: nowrap;
-      display: -webkit-box;
+
    -webkit-box-pack: center;
-    -webkit-box-align: center;
+   
   }
 }
 
 .container {
-    display: -webkit-box;
+    
   // background: white;
-  -webkit-box-pack: justify;
+ 
   padding-top: 7px;
   padding-left: 7px;
   border-radius: 9px;
 }
 
 .columna {
-    display: -webkit-box;
-  -webkit-box-orient: vertical;
+    
+ 
   width: 100%;
 
   .fila {
@@ -596,7 +826,7 @@ html {
   font-weight: 500;
   text-transform: capitalize;
   // font-family: "Calibri Regular", sans-serif;
-    display: -webkit-box;
+    
   white-space: nowrap;
   padding-left: 2px;
   margin-top: 4px;
@@ -618,12 +848,12 @@ html {
   font-weight: 500;
   text-transform: capitalize;
   // font-family: "Calibri Regular", sans-serif;
-    display: -webkit-box;
+    
   white-space: nowrap;
   padding-left: 2px;
 }
 
 .container-first-card-info {
-  padding-top: 4px;
-  padding-bottom: 8px;
+  padding-top: 10px;
+  padding-bottom: 0px;
 }
